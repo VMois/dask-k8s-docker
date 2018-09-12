@@ -1,0 +1,7 @@
+dask==0.19.1
+distributed==1.23.1
+numpy==1.15.1
+pandas==0.23.4
+psutil==5.4.7
+pyarrow==0.10.0
+s3fs==0.1.6
