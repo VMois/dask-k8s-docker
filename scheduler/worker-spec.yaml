@@ -4,15 +4,15 @@ spec:
   containers:
   - image: vmois/dask-k8s-worker:latest
     imagePullPolicy: IfNotPresent
-    args: [dask-worker, --nthreads, '1', --no-bokeh, --memory-limit, 0.5GB, --death-timeout, '60']
+    args: [dask-worker, --nthreads, '1', --no-bokeh, --memory-limit, 1GB, --death-timeout, '60']
     name: dask
     env:
       - name: EXTRA_PIP_PACKAGES
         value: fastparquet git+https://github.com/dask/distributed
     resources:
       limits:
-        cpu: "1"
-        memory: 0.5G
+        cpu: "0.5"
+        memory: 1G
       requests:
-        cpu: "1"
-        memory: 0.5G
+        cpu: "0.5"
+        memory: 1G
