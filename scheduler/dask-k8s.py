@@ -5,6 +5,6 @@ cluster = KubeCluster.from_yaml(
     'worker-spec.yaml', 
     port=8786,
     diagnostics_port=8787)
-cluster.adapt(minimum=1, maximum=3)
+cluster.adapt(minimum=1, maximum=8)
 while True:
     time.sleep(1)
