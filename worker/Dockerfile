@@ -7,5 +7,5 @@ WORKDIR /app
 ADD ./requirements.txt .
 RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Copy the current directory contents into the container at /app
-# ADD . .
+# Install OpenCV
+RUN pip install opencv-python==3.4.3.18
