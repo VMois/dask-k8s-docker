@@ -13,12 +13,16 @@ min_workers_number = os.getenv('DASK_CLUSTER_MIN_WORKERS', 1)
 max_workers_number = os.getenv('DASK_CLUSTER_MAX_WORKERS', 8)
 startup_cost = os.getenv('DASK_CLUSTER_STARTUP_COST', '10s')
 target_duration = os.getenv('DASK_CLUSTER_TARGET_DURATION', '10s')
+wait_count = os.getenv('DASK_CLUSTER_WAIT_COUNT', 4)
+check_interval = os.getenv('DASK_CLUSTER_CHECK_INTERVAL', '2')
 
 cluster.adapt(
     minimum=min_workers_number,
     maximum=max_workers_number,
     startup_cost=startup_cost,
-    target_duration=target_duration
+    target_duration=target_duration,
+    wait_count=wait_count,
+    interval=check_interval
 )
 while True:
-    time.sleep(0.1)
+    time.sleep(0.05)
