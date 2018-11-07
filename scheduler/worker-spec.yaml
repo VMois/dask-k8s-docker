@@ -3,12 +3,12 @@ spec:
   restartPolicy: Never
   containers:
   - image: vmois/dask-k8s-worker:latest
-    imagePullPolicy: IfNotPresent
-    args: [dask-worker, --nthreads, '2', --no-bokeh, --memory-limit, 2GB, --death-timeout, '60']
+    imagePullPolicy: Always # for test purpose
+    args: [dask-worker, --nthreads, '1', --no-bokeh, --memory-limit, 2GB, --death-timeout, '60']
     name: dask
-    env:
-      - name: EXTRA_PIP_PACKAGES
-        value: fastparquet git+https://github.com/dask/distributed
+    # env:
+    #   - name: EXTRA_PIP_PACKAGES
+    #     value: fastparquet
     resources:
       limits:
         cpu: "0.5"
