@@ -10,11 +10,11 @@ cluster = KubeCluster.from_yaml(
 # Get ENV variables for cluster scaling config
 # More info: https://github.com/dask/distributed/blob/master/distributed/deploy/adaptive.py
 min_workers_number = os.getenv('DASK_CLUSTER_MIN_WORKERS', 1)
-max_workers_number = os.getenv('DASK_CLUSTER_MAX_WORKERS', 8)
+max_workers_number = os.getenv('DASK_CLUSTER_MAX_WORKERS', 5)
 startup_cost = os.getenv('DASK_CLUSTER_STARTUP_COST', '10s')
 target_duration = os.getenv('DASK_CLUSTER_TARGET_DURATION', '10s')
-wait_count = os.getenv('DASK_CLUSTER_WAIT_COUNT', 4)
-check_interval = os.getenv('DASK_CLUSTER_CHECK_INTERVAL', '2')
+wait_count = os.getenv('DASK_CLUSTER_WAIT_COUNT', 3)
+check_interval = os.getenv('DASK_CLUSTER_CHECK_INTERVAL', '5s')
 
 cluster.adapt(
     minimum=min_workers_number,
@@ -25,4 +25,4 @@ cluster.adapt(
     interval=check_interval
 )
 while True:
-    time.sleep(0.05)
+    time.sleep(0.1)
