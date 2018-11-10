@@ -6,9 +6,9 @@ spec:
     imagePullPolicy: Always # for test purpose
     args: [dask-worker, --nthreads, '1', --no-bokeh, --memory-limit, 2GB, --death-timeout, '60']
     name: dask
-    # env:
-    #   - name: EXTRA_PIP_PACKAGES
-    #     value: fastparquet
+    env:
+       - name: DASK_WORKER_MEMORY_TARGET
+         value: "1.0"
     resources:
       limits:
         cpu: "0.5"
