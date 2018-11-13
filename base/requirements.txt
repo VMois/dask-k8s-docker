@@ -1,5 +1,5 @@
-dask==0.19.1
-distributed==1.23.1
+dask==0.20.1
+distributed==1.24.1
 numpy==1.15.1
 pandas==0.23.4
 psutil==5.4.7
@@ -10,3 +10,4 @@ fastparquet==0.1.6
 dask-ml==0.10.0
 joblib==0.12.5
 scikit-learn==0.20.0
+opencv-python==3.4.3.18
