@@ -5,13 +5,15 @@ Currently, under active development. **Not suitable for production!**.
 ## Description
 
 Docker images used by [dask-k8s-chart](https://github.com/VMois/dask-k8s-chart) repo.
-Two images are presented:
+Three images are presented:
 
-- custom Dask scheduler
-- custom Dask worker
+- base image
+- scheduler
+- worker
 
 Links to Docker Hub:
 
+- [base](https://hub.docker.com/r/vmois/dask-k8s-base/)
 - [scheduler](https://hub.docker.com/r/vmois/dask-k8s-scheduler/)
 - [worker](https://hub.docker.com/r/vmois/dask-k8s-worker/)
 

@@ -3,16 +3,16 @@ spec:
   restartPolicy: Never
   containers:
   - image: vmois/dask-k8s-worker:latest
-    imagePullPolicy: Always # for test purpose
-    args: [dask-worker, --nthreads, '1', --no-bokeh, --memory-limit, 2GB, --death-timeout, '60']
+    imagePullPolicy: IfNotPresent # for test purpose use Always
+    args: [dask-worker, --nthreads, '2', --no-bokeh, --memory-limit, 4GB, --death-timeout, '60']
     name: dask
-    env:
-       - name: DASK_WORKER_MEMORY_TARGET
-         value: "1.0"
+    # env:
+    #   - name: DASK_WORKER_MEMORY_TARGET
+    #     value: "1.0"
     resources:
       limits:
-        cpu: "0.5"
-        memory: 2G
+        cpu: "1"
+        memory: 4G
       requests:
-        cpu: "0.5"
-        memory: 2G
+        cpu: "1"
+        memory: 4G
