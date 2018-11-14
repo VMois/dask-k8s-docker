@@ -1,1 +1,2 @@
 bokeh==0.13.0
+dask-kubernetes==0.6.0
