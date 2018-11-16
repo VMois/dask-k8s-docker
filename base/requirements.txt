@@ -11,3 +11,4 @@ dask-ml==0.10.0
 joblib==0.12.5
 scikit-learn==0.20.0
 opencv-python==3.4.3.18
+dask-tensorflow==0.0.2
