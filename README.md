@@ -7,12 +7,6 @@ Currently, under active development. **Not suitable for production!**.
 Docker images used by [dask-k8s-chart](https://github.com/VMois/dask-k8s-chart) repo.
 Three images are presented:
 
-- base image
-- scheduler
-- worker
-
-Links to Docker Hub:
-
 - [base](https://hub.docker.com/r/vmois/dask-k8s-base/)
 - [scheduler](https://hub.docker.com/r/vmois/dask-k8s-scheduler/)
 - [worker](https://hub.docker.com/r/vmois/dask-k8s-worker/)
@@ -24,3 +18,4 @@ Any fixes, suggestions and improvements are welcome. Don't hesitate to open an i
 Possible topics for contributions:
 
 - minimalization of Docker images sizes
+- customization of Docker images
